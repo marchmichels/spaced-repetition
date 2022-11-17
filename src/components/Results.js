@@ -12,6 +12,7 @@ import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 
 //display (card with a button)
 export default function Results() {
@@ -33,8 +34,13 @@ export default function Results() {
 
 
 
-            <Link target="_blank" rel="noopener noreferrer" href="https://github.com/marchmichels/spaced-repetition">View GitHub Repository</Link>
 
+            <Typography variant={'h6'} align={'center'}>
+                <Link target="_blank" rel="noopener noreferrer" href="https://github.com/marchmichels/spaced-repetition">View GitHub Repository</Link>
+            </Typography>
+
+            <Typography variant={'h2'} align={'center'}>Spaced Repetition</Typography>
+            <Typography variant={'h6'} align={'center'}>React Trivia</Typography>
             <Card>
 
 
