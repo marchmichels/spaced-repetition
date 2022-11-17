@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import View from "./componets/View";
+import Grid from "@mui/system/Unstable_Grid/Grid";
 
-function App() {
+export default function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+    <Grid
+      container
+      spacing={1}
+      direction="column"
+      alignItems="center"
+      justifyContent="center"
+      style={{ minHeight: '100vh' }}
+      sx={{ bgcolor: '#e3e3e3' }}
+    >
+
+      <View />
+
+    </Grid>
+
+  );
+
+}
