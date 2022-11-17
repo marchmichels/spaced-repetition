@@ -12,6 +12,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Container from '@mui/material/Container';
+import Link from '@mui/material/Link';
 
 //display (card with a button)
 export default function Results() {
@@ -29,6 +30,8 @@ export default function Results() {
 
     return (
         <Container>
+            <Link target="_blank" rel="noopener noreferrer" href="https://github.com/marchmichels/spaced-repetition">View GitHub Repository</Link>
+
 
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
