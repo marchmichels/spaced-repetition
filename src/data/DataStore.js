@@ -88,9 +88,9 @@ let DataStore = {
         this.updateSubscribers();
     },
     forgottenMastery: function () {
-        let unusedCards = this.cardsBank.slice(5);
+        let unusedCards = this.cardsBank.slice(5); //an array of cards that were not asked last time
         unusedCards.forEach(card => {
-            card.updateMastery(.9);
+            card.updateMastery(.9); //slightly reduce mastery to keeps cards cycling
         });
     }
 }
