@@ -1,4 +1,4 @@
-import View from "./componets/View";
+import View from "./components/View";
 import Grid from "@mui/system/Unstable_Grid/Grid";
 
 export default function App() {

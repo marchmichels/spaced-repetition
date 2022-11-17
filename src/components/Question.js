@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { useState, useEffect } from "react";
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -25,7 +24,7 @@ export default function Question() {
     }
 
     return (
-        <Card variant="outlined">
+        <Card sx={{width:1/2}} variant="outlined">
 
             <CardContent>
                 <Typography>Question:</Typography>

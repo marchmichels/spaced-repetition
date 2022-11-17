@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { useState, useEffect } from "react";
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -27,8 +26,16 @@ export default function Answer({ answer }) {
         setCurCard(DataStore.curCard)
     }
 
+    function getNextView() {
+        if (curCard > 3) {
+            DataStore.setView(<Results />);
+        } else {
+            DataStore.setView(<Question />);
+        }
+    }
+
     return (
-        <Card variant="outlined">
+        <Card sx={{width:1/2}} variant="outlined">
 
             <CardContent>
                 <Typography>Answer:</Typography>
@@ -51,11 +58,7 @@ export default function Answer({ answer }) {
                     onClick={() => {
                         DataStore.cardsBank[DataStore.curCard].updateMastery(.5);
                         DataStore.nextCard();
-                        if (curCard > 3) {
-                            DataStore.setView(<Results />);
-                        } else {
-                            DataStore.setView(<Question />);
-                        }
+                        getNextView();
                     }}
                 >didn't get it</Button>
 
@@ -74,12 +77,8 @@ export default function Answer({ answer }) {
 
                         DataStore.cardsBank[DataStore.curCard].updateMastery(.9);
                         DataStore.nextCard();
+                        getNextView();
 
-                        if (curCard > 3) {
-                            DataStore.setView(<Results />);
-                        } else {
-                            DataStore.setView(<Question />);
-                        }
                     }}
                 >getting it</Button>
 
@@ -98,12 +97,8 @@ export default function Answer({ answer }) {
 
                         DataStore.cardsBank[DataStore.curCard].updateMastery(1.2);
                         DataStore.nextCard();
+                        getNextView();
 
-                        if (curCard > 3) {
-                            DataStore.setView(<Results />);
-                        } else {
-                            DataStore.setView(<Question />);
-                        }
                     }}
                 >totally understand</Button>
 

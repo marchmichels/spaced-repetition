@@ -1,4 +1,4 @@
-import Results from "./../componets/Results";
+import Results from "./../components/Results";
 
 ///////////////////////////////////////
 // Questions and answers are from W3Schools React Quiz
@@ -86,6 +86,12 @@ let DataStore = {
         this.cardsBank = [...this.cardsBank.sort((a, b) => a.mastery - b.mastery)];
         this.curCard = 0;
         this.updateSubscribers();
+    },
+    forgottenMastery: function () {
+        let unusedCards = this.cardsBank.slice(5);
+        unusedCards.forEach(card => {
+            card.updateMastery(.9);
+        });
     }
 }
 
